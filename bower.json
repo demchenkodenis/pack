@@ -1,0 +1,23 @@
+{
+  "name": "pack",
+  "description": "install all what you need",
+  "main": "index.js",
+  "authors": [
+    "denis demchenko"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "gulp",
+    "modules",
+    "bower",
+    "npm"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
