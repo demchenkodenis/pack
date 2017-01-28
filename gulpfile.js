@@ -1,7 +1,7 @@
 'use strict';
 var gulp 	    = require('gulp'),
     prefixer    = require('gulp-autoprefixer'),
-    csso        = require('gulp-csso'). 
+    csso        = require('gulp-csso'),
     imagemin    = require('gulp-imagemin'),
     server      = require('gulp-server-livereload'),
     sass        = require('gulp-sass'),
@@ -36,7 +36,7 @@ var path = {
             img: 'app/img/**/*.*',
             fonts: 'app/fonts/**/*.*'
         },
-        clean: './build'
+        clean: 'build'
 };
 
 /*  Tasks   */
@@ -79,17 +79,26 @@ gulp.task('fonts', function() {
 
 
 //build
-gulp.task('build', function () {
+gulp.task('build', ['style', 'fonts', 'image'], function () {
     return gulp.src('app/*.html')
         .pipe(clean(path.clean))
         .pipe(useref())
-        .pipe(gulpif('*.min.js', uglify()))
-        .pipe(gulpif('*.min.css', csso()))
-        .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.css', csso()))
+        //.pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest('build'));
 });
 
+//server build
+gulp.task('start-build', function() {
+  gulp.src('build')
+    .pipe(server({
+      livereload: true,
+      open: true
+    }));
+});
 
+//task for design
 gulp.task('default', function() {  
     gulp.run('webserver', 'style');
 
