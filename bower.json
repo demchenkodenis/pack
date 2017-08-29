@@ -20,5 +20,7 @@
     "test",
     "tests"
   ],
-  "devDependencies": {}
+  "devDependencies": {
+    "framework7": "^1.6.4"
+  }
 }

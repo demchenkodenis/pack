@@ -1,0 +1,29 @@
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.wi-x8 {
+  font-size: 8rem; }
+
+.wi-lg {
+  font-size: 1.2rem; }
+
+.wi-2x {
+  font-size: 2rem; }
+
+.font-15rem {
+  font-size: 1.5rem; }
+
+.pull-right {
+  float: right; }
+
+.margin-top-20 {
+  margin-top: 20px; }
+
+.margin-top-40 {
+  margin-top: 40px; }
+
+.font-small {
+  font-size: .75rem; }

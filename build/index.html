@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Flat Weather</title>
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body class="theme-red layout-dark">
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-fixed">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Top Navbar. In Material theme it should be inside of the page-->
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="center">Flat Weather</div>
+                        </div>
+                    </div>
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <div class="content-block">
+                            <div class="content-block-inner">
+                                <!-- Link to another page -->
+                                <div class="row">
+                                    <div class="col-30">
+                                        <a href="#" id="changeCity" class="pull-left city"></a>
+                                    </div>
+                                    <div class="col-70" id="date"></div>
+                                </div>
+                                <div id="weatherTemplate"></div>
+                                <div id="nextDays" class="row"></div>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/js.min.js"></script>
+</body>
+
+</html>
